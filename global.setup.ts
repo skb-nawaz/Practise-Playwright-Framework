@@ -1,26 +1,17 @@
-import { test } from "../fixtures/common-fixture";
-import { expect } from "@playwright/test";
+import { test } from "./fixtures/hooks-fixtures";
 
-test("global setup for auto login", async ({
+test("global setup for auto login to SauceDemo", async ({
   page,
   loginPageFixture,
-  commonUtilsFixture,
-  dashBoardFixture,
+  commonutilsFixture,
 }) => {
-  const userName = commonUtilsFixture.encryptData("orangehrm_skbn");
-  const password = commonUtilsFixture.encryptData("184G1a0126@");
+  const userName = commonutilsFixture.decryptData(process.env.SAUCE_USERNAME!);
+  const password = commonutilsFixture.decryptData(process.env.SAUCE_PASSWORD!);
 
-  const dec_userName_data = commonUtilsFixture.decryptData(userName);
+  await loginPageFixture.sauceDemoGoto();
+  await loginPageFixture.sauceDemoLogin(userName, password);
 
-  const dec_password_data = commonUtilsFixture.decryptData(password);
-
-  await loginPageFixture.gotoOrangeHrm();
-
-  await loginPageFixture.loginOrangeHrm(dec_userName_data, dec_password_data);
-
-  await expect(dashBoardFixture.dashBoardText).toBeVisible({
-    timeout: 120000,
-  });
+  await page.waitForURL("**/inventory.html");
 
   await page.context().storageState({
     path: "./PlaywrightAuthFile/.auth/auth.json",
