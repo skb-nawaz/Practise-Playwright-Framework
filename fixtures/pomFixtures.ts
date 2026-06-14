@@ -1,7 +1,7 @@
 import { test as baseTest, expect } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage";
 import { DashBoardPage } from "../pages/DashBoardPage";
-import { SideMenuPage } from "../pages/sideMenuPage";
+import { SideMenuPage } from "../pages/SideMenuPage";
 import { ItemsPage } from "../pages/ItemsPage";
 import { CheckOutPage } from "../pages/checkoutPage";
 
