@@ -1,6 +1,6 @@
 import { test as baseTest } from "../fixtures/commonUtilsFixtures";
 import type { LoginPage } from "../pages/LoginPage";
-import type { SideMenuPage } from "../pages/sideMenuPage";
+import type { SideMenuPage } from "../pages/SideMenuPage";
 
 type hookFixturesType = {
   gotoUrlFixture: any;

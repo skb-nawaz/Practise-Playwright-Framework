@@ -3,7 +3,7 @@ import { LoginPage } from "../pages/LoginPage";
 import { DashBoardPage } from "../pages/DashBoardPage";
 import { SideMenuPage } from "../pages/SideMenuPage";
 import { ItemsPage } from "../pages/ItemsPage";
-import { CheckOutPage } from "../pages/checkoutPage";
+import { CheckOutPage } from "../pages/CheckoutPage";
 
 type pomFixturesType = {
   loginPageFixture: LoginPage;
