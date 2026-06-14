@@ -1,0 +1,14 @@
+{
+  "worngPasswordData": {
+    "password": "wrongPassword",
+    "InvalidInput": "Epic sadface: Username and password do not match any user in this service"
+  },
+  "wrongUserNameData": {
+    "userName": "skb nawaz",
+    "InvalidInput": "Epic sadface: Username and password do not match any user in this service"
+  },
+  "wrongUserNameAndPassword": {
+    "userName": "skbnawaz",
+    "password": "wrongPassword 132"
+  }
+}
