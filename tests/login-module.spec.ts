@@ -108,10 +108,10 @@ test(
     await loginPageFixture.sauceDemoLogin(dec_userName, dec_password);
     await page.waitForTimeout(3000);
     await expect(dashBoardPageFixture.productTestLocator).toHaveScreenshot(
-      "Products.png",
+      "Products-chromium-linux.png",
     );
     await expect(dashBoardPageFixture.allProducts).toHaveScreenshot(
-      "allProductsGrid.png",
+      "allProductsGrid-chromium-linux.png",
     );
     //Epic sadface: Username and password do not match any user in this service
   },
